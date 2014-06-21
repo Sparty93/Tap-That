@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		26E880A4195537A6007BDB4C /* CScd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CScd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E880A4195537A6007BDB4C /* Tap That.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tap That.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E880A8195537A6007BDB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26E880A9195537A6007BDB4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E880AB195537A6007BDB4C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		26E880AF195537A6007BDB4C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		26E880B2195537A6007BDB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26E880B4195537A6007BDB4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		26E880BA195537A6007BDB4C /* CScdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CScdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E880BA195537A6007BDB4C /* Tap ThatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tap ThatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E880BF195537A6007BDB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26E880C0195537A6007BDB4C /* CScdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CScdTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,8 +70,8 @@
 		26E880A5195537A6007BDB4C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26E880A4195537A6007BDB4C /* CScd.app */,
-				26E880BA195537A6007BDB4C /* CScdTests.xctest */,
+				26E880A4195537A6007BDB4C /* Tap That.app */,
+				26E880BA195537A6007BDB4C /* Tap ThatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		26E880A3195537A6007BDB4C /* CScd */ = {
+		26E880A3195537A6007BDB4C /* Tap That */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26E880C4195537A6007BDB4C /* Build configuration list for PBXNativeTarget "CScd" */;
+			buildConfigurationList = 26E880C4195537A6007BDB4C /* Build configuration list for PBXNativeTarget "Tap That" */;
 			buildPhases = (
 				26E880A0195537A6007BDB4C /* Sources */,
 				26E880A1195537A6007BDB4C /* Frameworks */,
@@ -130,14 +130,14 @@
 			);
 			dependencies = (
 			);
-			name = CScd;
+			name = "Tap That";
 			productName = CScd;
-			productReference = 26E880A4195537A6007BDB4C /* CScd.app */;
+			productReference = 26E880A4195537A6007BDB4C /* Tap That.app */;
 			productType = "com.apple.product-type.application";
 		};
-		26E880B9195537A6007BDB4C /* CScdTests */ = {
+		26E880B9195537A6007BDB4C /* Tap ThatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26E880C7195537A6007BDB4C /* Build configuration list for PBXNativeTarget "CScdTests" */;
+			buildConfigurationList = 26E880C7195537A6007BDB4C /* Build configuration list for PBXNativeTarget "Tap ThatTests" */;
 			buildPhases = (
 				26E880B6195537A6007BDB4C /* Sources */,
 				26E880B7195537A6007BDB4C /* Frameworks */,
@@ -148,9 +148,9 @@
 			dependencies = (
 				26E880BC195537A6007BDB4C /* PBXTargetDependency */,
 			);
-			name = CScdTests;
+			name = "Tap ThatTests";
 			productName = CScdTests;
-			productReference = 26E880BA195537A6007BDB4C /* CScdTests.xctest */;
+			productReference = 26E880BA195537A6007BDB4C /* Tap ThatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -164,6 +164,15 @@
 				TargetAttributes = {
 					26E880A3195537A6007BDB4C = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = MA7LQD78P2;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					26E880B9195537A6007BDB4C = {
 						CreatedOnToolsVersion = 6.0;
@@ -171,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 26E8809F195537A6007BDB4C /* Build configuration list for PBXProject "CScd" */;
+			buildConfigurationList = 26E8809F195537A6007BDB4C /* Build configuration list for PBXProject "Tap That" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -184,8 +193,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				26E880A3195537A6007BDB4C /* CScd */,
-				26E880B9195537A6007BDB4C /* CScdTests */,
+				26E880A3195537A6007BDB4C /* Tap That */,
+				26E880B9195537A6007BDB4C /* Tap ThatTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,7 +243,7 @@
 /* Begin PBXTargetDependency section */
 		26E880BC195537A6007BDB4C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 26E880A3195537A6007BDB4C /* CScd */;
+			target = 26E880A3195537A6007BDB4C /* Tap That */;
 			targetProxy = 26E880BB195537A6007BDB4C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -335,9 +344,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CScd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tap That";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -346,9 +358,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CScd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tap That";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -367,7 +382,7 @@
 				INFOPLIST_FILE = CScdTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tap ThatTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -383,7 +398,7 @@
 				INFOPLIST_FILE = CScdTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tap ThatTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -391,7 +406,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		26E8809F195537A6007BDB4C /* Build configuration list for PBXProject "CScd" */ = {
+		26E8809F195537A6007BDB4C /* Build configuration list for PBXProject "Tap That" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26E880C2195537A6007BDB4C /* Debug */,
@@ -400,7 +415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		26E880C4195537A6007BDB4C /* Build configuration list for PBXNativeTarget "CScd" */ = {
+		26E880C4195537A6007BDB4C /* Build configuration list for PBXNativeTarget "Tap That" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26E880C5195537A6007BDB4C /* Debug */,
@@ -408,7 +423,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		26E880C7195537A6007BDB4C /* Build configuration list for PBXNativeTarget "CScdTests" */ = {
+		26E880C7195537A6007BDB4C /* Build configuration list for PBXNativeTarget "Tap ThatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26E880C8195537A6007BDB4C /* Debug */,
