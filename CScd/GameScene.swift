@@ -9,48 +9,40 @@
 import SpriteKit
 import QuartzCore
 
-var score = 0
+var gameScore = GameScore()
 var nowTime : CFTimeInterval = CACurrentMediaTime()
 var gameOver : Bool = false
-let points = SKLabelNode(fontNamed:"Helvetica Neue UltraLight")
-let time = SKLabelNode(fontNamed:"Helvetica Neue UltraLight")
-let highPoints = SKLabelNode(fontNamed:"Helvetica Neue UltraLight")
+var points = SKLabelNode(fontNamed:"Helvetica Neue UltraLight")
+var time = SKLabelNode(fontNamed:"Helvetica Neue UltraLight")
+var highPoints = SKLabelNode(fontNamed:"Helvetica Neue UltraLight")
 
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        
-        
+        gameScore.score = 0
+        nowTime = CACurrentMediaTime()
+        gameOver = false
+        points = SKLabelNode(fontNamed:"Helvetica Neue UltraLight")
+        time = SKLabelNode(fontNamed:"Helvetica Neue UltraLight")
+        highPoints = SKLabelNode(fontNamed:"Helvetica Neue UltraLight")
         
         points.fontSize = 175;
-        points.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame) / 2 * 1.5);
-        
+        points.position = CGPoint(x:CGRectGetMidX(self.frame), y:(CGRectGetMidY(self.frame) + 200));
         self.addChild(points)
         
         time.fontSize = 175;
-        time.position = CGPoint(x:320, y:CGRectGetMidY(self.frame) / 4 * 1.5);
-        
+        time.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame) - 300);
         self.addChild(time)
+        
+        self.backgroundColor = SKColor .greenColor()
         
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
         
-        if gameOver == true  {
-            
-            for touch: AnyObject in touches {
-                
-                score = 0
-                nowTime = CACurrentMediaTime()
-                gameOver = false
-                
-            }
-            
-        }
-        
         for touch: AnyObject in touches {
-            score++
+            gameScore.score++
         }
     }
    
@@ -61,14 +53,25 @@ class GameScene: SKScene {
 
         if (CACurrentMediaTime() - nowTime) < 5 {
             time.text = "\(countDownTime)"
-            points.text = "\(score)"
-            self.backgroundColor = SKColor .greenColor()
-            
+            points.text = "\(gameScore.score)"
         }
         else {
 
             gameOver = true
-            self.backgroundColor = SKColor .redColor()
+            
+            let scene = GameOverScene.unarchiveFromFile("GameOverScene") as? GameOverScene
+            // Configure the view.
+            let skView = self.view as SKView
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            
+            /* Sprite Kit applies additional optimizations to improve rendering performance */
+            skView.ignoresSiblingOrder = true
+            
+            /* Set the scale mode to scale to fit the window */
+            //scene.scaleMode = .AspectFill
+            
+            skView.presentScene(scene)
             
         }
     }

@@ -14,6 +14,9 @@
 		26E880B3195537A6007BDB4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E880B1195537A6007BDB4C /* Main.storyboard */; };
 		26E880B5195537A6007BDB4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E880B4195537A6007BDB4C /* Images.xcassets */; };
 		26E880C1195537A6007BDB4C /* CScdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E880C0195537A6007BDB4C /* CScdTests.swift */; };
+		D4E708871955BF48002DDBBD /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D4E708861955BF48002DDBBD /* GameOverScene.sks */; };
+		D4E708891955C771002DDBBD /* GameScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E708881955C771002DDBBD /* GameScore.swift */; };
+		D4FADD741955BD4500596089 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FADD731955BD4500596089 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		26E880BA195537A6007BDB4C /* Tap ThatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tap ThatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E880BF195537A6007BDB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26E880C0195537A6007BDB4C /* CScdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CScdTests.swift; sourceTree = "<group>"; };
+		D4E708861955BF48002DDBBD /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		D4E708881955C771002DDBBD /* GameScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScore.swift; sourceTree = "<group>"; };
+		D4FADD731955BD4500596089 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +88,13 @@
 				26E880A9195537A6007BDB4C /* AppDelegate.swift */,
 				26E880AB195537A6007BDB4C /* GameScene.sks */,
 				26E880AD195537A6007BDB4C /* GameScene.swift */,
+				D4E708861955BF48002DDBBD /* GameOverScene.sks */,
+				D4FADD731955BD4500596089 /* GameOverScene.swift */,
 				26E880AF195537A6007BDB4C /* GameViewController.swift */,
 				26E880B1195537A6007BDB4C /* Main.storyboard */,
 				26E880B4195537A6007BDB4C /* Images.xcassets */,
 				26E880A7195537A6007BDB4C /* Supporting Files */,
+				D4E708881955C771002DDBBD /* GameScore.swift */,
 			);
 			path = CScd;
 			sourceTree = "<group>";
@@ -204,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E708871955BF48002DDBBD /* GameOverScene.sks in Resources */,
 				26E880B5195537A6007BDB4C /* Images.xcassets in Resources */,
 				26E880AC195537A6007BDB4C /* GameScene.sks in Resources */,
 				26E880B3195537A6007BDB4C /* Main.storyboard in Resources */,
@@ -225,8 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E880AE195537A6007BDB4C /* GameScene.swift in Sources */,
+				D4E708891955C771002DDBBD /* GameScore.swift in Sources */,
 				26E880B0195537A6007BDB4C /* GameViewController.swift in Sources */,
 				26E880AA195537A6007BDB4C /* AppDelegate.swift in Sources */,
+				D4FADD741955BD4500596089 /* GameOverScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +359,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CScd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Tap That";
 				PROVISIONING_PROFILE = "";
@@ -361,6 +374,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CScd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Tap That";
 				PROVISIONING_PROFILE = "";
@@ -422,6 +436,7 @@
 				26E880C6195537A6007BDB4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26E880C7195537A6007BDB4C /* Build configuration list for PBXNativeTarget "Tap ThatTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +445,7 @@
 				26E880C9195537A6007BDB4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
